@@ -2,10 +2,10 @@ FROM jekyll/jekyll:stable
 MAINTAINER Lenciel <lenciel@gmail.com>
 COPY copy /
 RUN \
-  apk --update add readline-dev libxml2-dev libxslt-dev \
-    zlib-dev ruby-dev yaml-dev libffi-dev libiconv-dev\
+  apk --update add libiconv-dev readline-dev libxml2-dev libxslt-dev \
+    zlib-dev ruby-dev yaml-dev libffi-dev\
       build-base git && \
-      
+
   cd ~ && \
   gem install --no-document octopress && \
   mkdir -p /opt/octopress && cd /opt/octopress && \
