@@ -1,5 +1,5 @@
 FROM jekyll/jekyll:stable
-MAINTAINER Jordon Bedwell <jordon@envygeeks.io>
+MAINTAINER Lenciel <lenciel@gmail.com>
 COPY copy /
 RUN \
   apk --update add readline-dev libxml2-dev libxslt-dev \
@@ -25,3 +25,11 @@ RUN \
 
   rm -rf .editorconfig .git .gitattributes .gitignore .powrc .travis.yml \
     CHANGELOG.markdown README.markdown config.rb config.ru
+
+
+  # Set proper locales
+RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
+    locale-gen en_US.utf8 && \
+    /usr/sbin/update-locale LANG=en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
+
