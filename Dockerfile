@@ -24,7 +24,7 @@ RUN \
     ruby-dev yaml-dev libffi-dev build-base git && \
 
   rm -rf .editorconfig .git .gitattributes .gitignore .powrc .travis.yml \
-    CHANGELOG.markdown README.markdown config.rb config.ru && \
+    CHANGELOG.markdown README.markdown config.rb config.ru
 
   echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
     locale-gen en_US.utf8 && /usr/sbin/update-locale LANG=en_US.UTF-8
