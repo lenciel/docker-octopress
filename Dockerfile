@@ -1,8 +1,6 @@
 FROM       ubuntu:latest
 MAINTAINER lenciel <lenciel@gmail.com>
 
-# aliyun
-ADD sources.list /etc/apt/sources.list
 
 # Install depndencies
 RUN apt-get update && apt-get install -y \
