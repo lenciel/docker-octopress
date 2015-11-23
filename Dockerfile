@@ -1,5 +1,5 @@
-FROM       daocloud.io/library/ubuntu:latest
-MAINTAINER xiongjun,dockerxman <fenyunxx@163.com>
+FROM       ubuntu:latest
+MAINTAINER lenciel <lenciel@gmail.com>
 
 # aliyun
 ADD sources.list /etc/apt/sources.list
