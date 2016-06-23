@@ -10,10 +10,16 @@ RUN apt-get update && apt-get install -y \
     curl \
     openssl \
     libssl-dev \
+    zliblg-dev \
+    ruby1.9.1 \
+    libopenssl-ruby1.9.1 \
     ruby1.9.1-dev \
     nodejs \
     nginx \
     build-essential
+
+# Update alternatives
+RUN update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby1.9.1 400
 
 # Set proper locales
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
