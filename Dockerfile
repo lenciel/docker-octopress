@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     openssl \
     libssl-dev \
-    ruby1.9.1 \
+    ruby1.9.1-dev \
     nodejs \
     nginx \
     build-essential
