@@ -1,31 +1,21 @@
-Octopress 博客 Dockerfile
+Octopress in Docker
 ==============================
-![](http://www.loverobots.cn/wp-content/uploads/2015/06/Octopress-site-01.jpg)
-
-![](http://xuhehuan.com/wp-content/uploads/2012/08/CA535E9CF7D76A628C58F8EC287C225E_762_352.jpeg)
 
 创建Octopress博客docker镜像的Dockerfile[Octopress framework](https://github.com/imathis/octopress)
 
-## 从index.docker.io部署
+## 初始化安装
 
 运行实例要保持config和posts持续性, 你必须映射本地目录到Octopress容器:
 
-    docker pull dockerxman/docker-octopress
-    git clone https://github.com/xiongjungit/docker-octopress
+    docker pull lenciel/docker-octopress
+    git clone https://github.com/lenciel/docker-octopress
     cd docker-octopress
-    docker run -d -v `pwd`/source:/srv/octopress-master/source -v `pwd`/config:/srv/octopress-master/config -p 80:80 dockerxman/docker-octopress
+    docker run -d -v `pwd`/source:/srv/octopress-master/source -v `pwd`/config:/srv/octopress-master/config -p 80:80 lenciel/docker-octopress
 
-编辑 `config/` 满足你的需求  
-写博客到`source/_posts/`
-然后导航到 `http://ip`
 
-## 创建镜像
+## 使用
 
-要创建自己的镜像, 在克隆后的包含`Dockerfile`的docker-octopress目录里面运行 `sudo docker build -t 镜像名字 .` 
-
-## 用Octopress写博客
-
-新建博客的两种方式:
+新建文章的两种方式:
 
 ### 自动
 
@@ -56,13 +46,3 @@ Octopress 博客 Dockerfile
 
 然后重启容器。
 
-
-## 代码创建和维护
-
-* QQ: 479608797
-
-* 邮件: fenyunxx@163.com
-
-* [github](https://github.com/xiongjungit/docker-octopress)
-
-* [dockerhub](https://hub.docker.com/r/dockerxman/)
